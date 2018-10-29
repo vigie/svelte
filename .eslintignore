@@ -1,6 +1,7 @@
 src/shared
 shared.js
 store.js
+transitions.js
 test/test.js
 test/setup.js
 **/_actual.js

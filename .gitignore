@@ -5,6 +5,7 @@ node_modules
 /compiler/
 /ssr/
 /shared.js
+/transitions.js
 /scratch/
 /coverage/
 /coverage.lcov/

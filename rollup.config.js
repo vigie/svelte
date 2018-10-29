@@ -86,5 +86,21 @@ export default [
 			file: 'shared.js',
 			format: 'es'
 		}
-	}
+	},
+
+	/* transitions.js */
+	{
+		input: 'src/transitions/index.ts',
+		plugins: [
+			resolve(),
+			typescript({
+				include: 'src/transitions/**',
+				typescript: require('typescript'),
+			}),
+		],
+		output: {
+			file: 'transitions.js',
+			format: 'es',
+		},
+	},
 ];
