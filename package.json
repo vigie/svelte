@@ -14,7 +14,8 @@
     "easing.*",
     "motion.*",
     "svelte",
-    "README.md"
+    "README.md",
+    "rollup.config.js"
   ],
   "scripts": {
     "test": "mocha --opts mocha.opts",
