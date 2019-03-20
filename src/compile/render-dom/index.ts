@@ -429,8 +429,6 @@ export default function dom(
 
 					${css.code && `this.shadowRoot.innerHTML = \`<style>${escape(css.code, { only_escape_at_symbol: true }).replace(/\\/g, '\\\\')}${options.dev ? `\n/*# sourceMappingURL=${css.map.toUrl()} */` : ''}</style>\`;`}
 
-					${dev_props_check}
-
 					if (options) {
 						if (options.target) {
 							@insert(options.target, this, options.anchor);
@@ -446,6 +444,7 @@ export default function dom(
 
 				connectedCallback() {
 					@init(this, { target: this.shadowRoot }, ${definition}, create_fragment, ${not_equal}, ${prop_names});
+					${dev_props_check}
 					super.connectedCallback();
 				}				
 
