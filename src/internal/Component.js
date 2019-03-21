@@ -112,11 +112,13 @@ export function init(component, options, instance, create_fragment, not_equal, p
 		}
 
 		if (options.intro && component.$$.fragment.i) component.$$.fragment.i();
-		mount_component(component, options.target, options.anchor);
-		flush();
 	}
 
 	set_current_component(parent_component);
+}
+export function mountComponent(component, options) {
+	mount_component(component, options.target, options.anchor);
+	flush();
 }
 
 export let SvelteElement;
